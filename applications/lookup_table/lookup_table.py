@@ -1,12 +1,19 @@
 import math
 import random
 
+stored_values = {}
+
+
 def slowfun(x, y):
     # TODO: Modify to produce the same results, but much faster
+    if (x, y) in stored_values.keys():
+        return stored_values[(x, y)]
+
     v = math.pow(x, y)
     v = math.factorial(v)
     v //= (x + y)
     v %= 982451653
+    stored_values[(x, y)] = v
 
     return v
 

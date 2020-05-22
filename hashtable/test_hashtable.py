@@ -6,7 +6,7 @@ from hashtable import HashTable
 class TestHashTable(unittest.TestCase):
 
     def test_hash_table_insertion_and_retrieval(self):
-        ht = HashTable(8)
+        ht = HashTable(20)
 
         ht.put("key-0", "val-0")
         ht.put("key-1", "val-1")
